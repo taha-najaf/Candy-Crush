@@ -11,3 +11,4 @@ D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\obj\Debu
 D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\obj\Debug\Candy Crush.exe
 D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\obj\Debug\Candy Crush.pdb
 D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\obj\Debug\Candy_Crush.Loginfrm.resources
+D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\obj\Debug\Candy_Crush.Registerfrm.resources
