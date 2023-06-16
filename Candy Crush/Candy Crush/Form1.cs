@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace Candy_Crush
 {
-    public partial class Form1 : Form
+    public partial class Loginfrm : Form
     {
-        public Form1()
+        public Loginfrm()
         {
             InitializeComponent();
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

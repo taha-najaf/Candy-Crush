@@ -1,0 +1,13 @@
+D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\bin\Debug\Candy Crush.exe.config
+D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\bin\Debug\Candy Crush.exe
+D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\bin\Debug\Candy Crush.pdb
+D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\bin\Debug\Guna.UI2.dll
+D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\obj\Debug\Candy Crush.csproj.AssemblyReference.cache
+D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\obj\Debug\Candy Crush.csproj.SuggestedBindingRedirects.cache
+D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\obj\Debug\Candy_Crush.Properties.Resources.resources
+D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\obj\Debug\Candy Crush.csproj.GenerateResource.cache
+D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\obj\Debug\Candy Crush.csproj.CoreCompileInputs.cache
+D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\obj\Debug\Candy Crush.csproj.CopyComplete
+D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\obj\Debug\Candy Crush.exe
+D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\obj\Debug\Candy Crush.pdb
+D:\programming\Projects\Candy Crush\Candy Crush\Candy Crush\Candy Crush\obj\Debug\Candy_Crush.Loginfrm.resources
