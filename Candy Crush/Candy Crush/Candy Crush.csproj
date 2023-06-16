@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="Matches.cs" />
     <Compile Include="Players.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
