@@ -30,6 +30,10 @@ namespace Candy_Crush
             db.Players.Add(player);
             db.SaveChanges();
             MessageBox.Show("You are registered !");
+            this.Hide();
+            Team_Alone team_Alone =new Team_Alone(player);
+            team_Alone.Show();
+
         }
 
         private void Registerfrm_Load(object sender, EventArgs e)

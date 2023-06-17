@@ -81,6 +81,12 @@
     <Compile Include="Registerfrm.Designer.cs">
       <DependentUpon>Registerfrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Team_Alone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Team_Alone.Designer.cs">
+      <DependentUpon>Team_Alone.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Loginfrm.resx">
       <DependentUpon>Loginfrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +102,9 @@
     </Compile>
     <EmbeddedResource Include="Registerfrm.resx">
       <DependentUpon>Registerfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Team_Alone.resx">
+      <DependentUpon>Team_Alone.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

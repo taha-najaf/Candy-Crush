@@ -18,6 +18,7 @@ namespace Candy_Crush
         public List <Players> Friends { get; set; }
         public int Wins { get; set; }
         public int Loses { get; set; }
+        public bool Groupgame { get; set; }
       //  public List <Matches> Matches { get; set; }=new List<Matches>();
         public Players() { }
         public Players( string name, string family,string username,string password)
@@ -30,6 +31,7 @@ namespace Candy_Crush
             Wins = 0;
             Loses = 0;
             record = 0;
+            Groupgame = false;
 
         }
     }

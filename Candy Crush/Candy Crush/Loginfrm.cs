@@ -46,11 +46,15 @@ namespace Candy_Crush
             var player=db.Players.FirstOrDefault(p=> p.Username == username && p.Password == password);
             if (player != null)
             {
-                MessageBox.Show("Login Successful!");
+                MessageBox.Show("Login Successful!","Login",MessageBoxButtons.OK);
+                this.Hide();
+                Team_Alone team_Alone = new Team_Alone(player);
+                team_Alone.ShowDialog();
+                
             }
             else
             {
-                MessageBox.Show("Invalid username or password. Please try again.");
+                MessageBox.Show("Invalid username or password. Please try again.","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
