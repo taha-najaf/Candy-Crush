@@ -9,7 +9,7 @@ namespace Candy_Crush
 {
     public class DataBase:DbContext
     {
-        public DataBase() : base("name=dbcd")//connection string 
+        public DataBase() : base("name=DBCD")//connection string 
         { }
         //list of objects 
         public DbSet<Players> Players { get; set; }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace Candy_Crush
 {
@@ -26,6 +27,9 @@ namespace Candy_Crush
             string username=usernametxt.Text;
             Players player = new Players(name,family,username,password);
             
+            db.Players.Add(player);
+            db.SaveChanges();
+            MessageBox.Show("You are registered !");
         }
 
         private void Registerfrm_Load(object sender, EventArgs e)

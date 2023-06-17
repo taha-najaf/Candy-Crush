@@ -155,7 +155,7 @@
             this.passwordtxt.Location = new System.Drawing.Point(7, 306);
             this.passwordtxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.passwordtxt.Name = "passwordtxt";
-            this.passwordtxt.PasswordChar = '\0';
+            this.passwordtxt.PasswordChar = '*';
             this.passwordtxt.PlaceholderText = "";
             this.passwordtxt.SelectedText = "";
             this.passwordtxt.Size = new System.Drawing.Size(284, 48);
