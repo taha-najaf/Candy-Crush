@@ -25,7 +25,7 @@ namespace Candy_Crush
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Registerbtn_Click(object sender, EventArgs e)

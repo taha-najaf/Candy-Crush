@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Candy.cs" />
+    <Compile Include="DataBase.cs" />
     <Compile Include="Loginfrm.cs">
       <SubType>Form</SubType>
     </Compile>
