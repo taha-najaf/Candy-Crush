@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
+
 
 namespace Candy_Crush
 {
     public partial class Loginfrm : Form
     {
+     
         public Loginfrm()
         {
             InitializeComponent();
@@ -23,15 +26,33 @@ namespace Candy_Crush
 
         }
 
-        private void guna2GradientButton1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Registerbtn_Click(object sender, EventArgs e)
         {
-             Registerfrm frm = new Registerfrm();
+            Registerfrm frm = new Registerfrm();
             frm.ShowDialog();
+            this.Close();
         }
+
+        private void Loginfrm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Loginbtn_Click(object sender, EventArgs e)
+        {
+            DataBase db = new DataBase();
+            string username=Usernametxt.Text;
+            string password=Passwordtxt.Text;
+            var player=db.Players.FirstOrDefault(p=> p.Username == username && p.Password == password);
+            if (player != null)
+            {
+                MessageBox.Show("Login Successful!");
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password. Please try again.");
+            }
+        }
+
     }
 }
