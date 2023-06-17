@@ -9,14 +9,14 @@ namespace Candy_Crush
 {
     public class Candy
     {
-        public string Type { get; set; }
-        public Point Position { get; set; }
 
-        // Constructor
-        public Candy(string type, Point position)
+        public string Color { get; set; }
+        public Image Image { get; set; }
+
+        public Candy(string color, Image image)
         {
-            Type = type;
-            Position = position;
+            Color = color;
+            Image = image;
         }
     }
 }
