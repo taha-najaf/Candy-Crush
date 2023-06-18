@@ -54,8 +54,8 @@ namespace Candy_Crush
         public List<Matches> GetMatches(int playerId)
         {
             return Matches
-                .Where(p => Matches.Any(f => f.WinnerId == playerId || f.LoserId == playerId))
-                .ToList();
+                .Where(m => m.WinnerId == playerId || m.LoserId == playerId)
+                    .ToList();
         }
 
     }
