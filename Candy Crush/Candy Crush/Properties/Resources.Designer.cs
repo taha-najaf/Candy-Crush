@@ -73,6 +73,16 @@ namespace Candy_Crush.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background {
+            get {
+                object obj = ResourceManager.GetObject("background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap download {
             get {
                 object obj = ResourceManager.GetObject("download", resourceCulture);
@@ -116,6 +126,16 @@ namespace Candy_Crush.Properties {
         internal static System.Drawing.Bitmap download__6_ {
             get {
                 object obj = ResourceManager.GetObject("download (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2023_06_18_145455 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2023-06-18 145455", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

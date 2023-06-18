@@ -26,29 +26,47 @@ namespace Candy_Crush
             score = 0;
         }
 
-        public void InitializeBoard(Control container)
+        public void InitializeBoard(PictureBox boardPanel)
         {
+            int tileWidth = 75;
+            int tileHeight = 50;
+
+            boardPanel.Controls.Clear(); // Clear existing tiles from the panel
+
             for (int r = 0; r < rows; r++)
             {
                 for (int c = 0; c < columns; c++)
                 {
                     PictureBox tile = new PictureBox();
                     tile.Name = $"{r}-{c}";
+                    tile.Width = tileWidth;
+                    tile.Height = tileHeight;
                     tile.Image = GetRandomCandyImage();
                     tile.SizeMode = PictureBoxSizeMode.StretchImage;
                     tile.DragEnter += DragEnter;
                     tile.DragDrop += DragDrop;
+                    tile.Click += Tile_Click;
+                    boardPanel.Controls.Add(tile);
 
-                    container.Controls.Add(tile);
+                    int x = c * tileWidth;
+                    int y = r * tileHeight;
+                    tile.SetBounds(x, y, tileWidth, tileHeight);
+
+                    boardPanel.Controls.Add(tile);
                     board[r, c] = tile;
                 }
             }
+        }
+        private void Tile_Click(object sender, EventArgs e)
+        {
+            PictureBox clickedTile = (PictureBox)sender;
+           
         }
 
         private Image GetRandomCandyImage()
         {
             string candyColor = GetRandomCandyColor();
-            string imagePath = $"./images/{candyColor}.png";
+            string imagePath = $"D:\\programming\\Projects\\Candy Crush\\Candy Crush\\Images\\candy\\{candyColor}.png";
             return Image.FromFile(imagePath);
         }
 

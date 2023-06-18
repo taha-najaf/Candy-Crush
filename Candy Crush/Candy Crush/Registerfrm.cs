@@ -25,11 +25,12 @@ namespace Candy_Crush
             string family = familytxt.Text;
             string password=passwordtxt.Text;
             string username=usernametxt.Text;
-            Players player = new Players(name,family,username,password);
+            string code=GenerateRandomCode();
+            Players player = new Players(name,family,username,password,code);
             
             db.Players.Add(player);
             db.SaveChanges();
-            MessageBox.Show("You are registered !");
+            MessageBox.Show($"You are registered and your code is:{player.Code} !");
             this.Hide();
             Team_Alone team_Alone =new Team_Alone(player);
             team_Alone.Show();
@@ -40,5 +41,14 @@ namespace Candy_Crush
         {
 
         }
+        public string GenerateRandomCode()
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            Random random = new Random();
+            string code = new string(Enumerable.Repeat(chars, 5)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
+            return code;
+        }
+
     }
 }

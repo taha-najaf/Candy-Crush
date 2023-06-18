@@ -153,6 +153,7 @@
             this.Passwordtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Passwordtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Passwordtxt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Passwordtxt.ForeColor = System.Drawing.Color.Black;
             this.Passwordtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Passwordtxt.Location = new System.Drawing.Point(7, 152);
             this.Passwordtxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -177,6 +178,7 @@
             this.Usernametxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Usernametxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Usernametxt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Usernametxt.ForeColor = System.Drawing.Color.Black;
             this.Usernametxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Usernametxt.Location = new System.Drawing.Point(7, 44);
             this.Usernametxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

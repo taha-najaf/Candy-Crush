@@ -13,6 +13,7 @@ namespace Candy_Crush
     public partial class Team_Alone : Form
     {
         private Players player;
+        DataBase db=new DataBase();
         public Team_Alone(Players player)
         {
             InitializeComponent();
@@ -26,12 +27,15 @@ namespace Candy_Crush
 
         private void SinglePlaybtn_Click(object sender, EventArgs e)
         {
-
+            MainGame mainGame = new MainGame(player);
+            mainGame.Show();
+            this.Close();
         }
 
         private void PlayGroupbtn_Click(object sender, EventArgs e)
         {
-            player.Groupgame = true;
+            MessageBox.Show($"Your code for playing with your friends is {player.Code}","Code",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
             this.Close();
         }
     }

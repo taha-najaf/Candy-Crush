@@ -63,12 +63,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Candy.cs" />
+    <Compile Include="CandyCrushBoard.cs" />
     <Compile Include="DataBase.cs" />
     <Compile Include="Loginfrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Loginfrm.Designer.cs">
       <DependentUpon>Loginfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainGame.Designer.cs">
+      <DependentUpon>MainGame.cs</DependentUpon>
     </Compile>
     <Compile Include="Matches.cs" />
     <Compile Include="Players.cs" />
@@ -89,6 +96,9 @@
     </Compile>
     <EmbeddedResource Include="Loginfrm.resx">
       <DependentUpon>Loginfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainGame.resx">
+      <DependentUpon>MainGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,6 +147,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2023-06-18 145455.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
