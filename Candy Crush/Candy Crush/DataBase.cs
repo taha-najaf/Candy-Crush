@@ -19,6 +19,7 @@ namespace Candy_Crush
         
         public DbSet<Players> Players { get; set; }
         public DbSet <Friends> Friends { get; set; }
+        public DbSet <Matches> Matches { get; set; }
 
         // friends table methods
         public void AddFriend(int playerId, int friendId)
@@ -43,5 +44,19 @@ namespace Candy_Crush
                 .Where(p => Friends.Any(f => f.PlayerId == playerId && f.FriendId == p.Id))
                 .ToList();
         }
+
+        //Match table
+        public void AddMatch(int winerId, int loserId)
+        {
+            Matches.Add(new Matches { WinnerId=winerId,LoserId=loserId });
+            SaveChanges();
+        }
+        public List<Matches> GetMatches(int playerId)
+        {
+            return Matches
+                .Where(p => Matches.Any(f => f.WinnerId == playerId || f.LoserId == playerId))
+                .ToList();
+        }
+
     }
 }

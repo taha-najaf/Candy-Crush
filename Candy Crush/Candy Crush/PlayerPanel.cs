@@ -24,6 +24,7 @@ namespace Candy_Crush
         {
             showtableOfPlayer();
             showFriendInfo();
+            showMatch();
             if (FriendsDatagridview.Rows.Count == 0)
             {
                 Friendlbl.Text = "No friends found.";
@@ -33,6 +34,11 @@ namespace Candy_Crush
                 Friendlbl.Text = string.Empty;
               
             }
+
+            if (MatchDGV.Rows.Count == 0)  Matchlbl.Text = "No Matches found.";
+            else
+                Matchlbl.Text = string.Empty;
+
 
         }
         private void showtableOfPlayer()
@@ -66,6 +72,7 @@ namespace Candy_Crush
                 if (!isFriendAlreadyAdded)
                 {
                     db.AddFriend(Player.Id, friend.Id);
+                    db.AddFriend(friend.Id, Player.Id);
                     db.SaveChanges();
                     MessageBox.Show(" Friend added successfully","Add friend",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     showFriendInfo();
@@ -102,6 +109,24 @@ namespace Candy_Crush
             }
             FriendsDatagridview.DataSource = table;
 
+        }
+
+        private void showMatch()
+        {
+            List <Matches> matches= new List<Matches>();
+            matches = db.GetMatches(Player.Id);
+
+            DataTable table= new DataTable();
+            table.Columns.Add("Id");
+            table.Columns.Add("Winner");
+            table.Columns.Add("Losser");
+            table.Columns.Add("Draw");
+
+            foreach (var item in matches)
+            {
+                table.Rows.Add(item.MatchId, item.WinnerId, item.LoserId,item.Draw);
+            }
+            MatchDGV.DataSource = table;
         }
     }
 }

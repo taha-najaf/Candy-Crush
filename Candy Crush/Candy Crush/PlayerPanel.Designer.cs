@@ -50,6 +50,8 @@
             this.Friendlbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.MatchDGV = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Matchlbl = new System.Windows.Forms.Label();
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.InfODataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FriendsDatagridview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MatchDGV)).BeginInit();
@@ -327,7 +329,7 @@
             this.MatchDGV.RowHeadersVisible = false;
             this.MatchDGV.RowHeadersWidth = 51;
             this.MatchDGV.RowTemplate.Height = 24;
-            this.MatchDGV.Size = new System.Drawing.Size(1414, 117);
+            this.MatchDGV.Size = new System.Drawing.Size(1137, 117);
             this.MatchDGV.TabIndex = 0;
             this.MatchDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.MatchDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -351,6 +353,40 @@
             this.MatchDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.MatchDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // Matchlbl
+            // 
+            this.Matchlbl.AutoSize = true;
+            this.Matchlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Matchlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Matchlbl.ForeColor = System.Drawing.Color.Khaki;
+            this.Matchlbl.Location = new System.Drawing.Point(636, 648);
+            this.Matchlbl.Name = "Matchlbl";
+            this.Matchlbl.Size = new System.Drawing.Size(213, 29);
+            this.Matchlbl.TabIndex = 1;
+            this.Matchlbl.Text = "No Matches found.";
+            // 
+            // guna2GradientButton1
+            // 
+            this.guna2GradientButton1.Animated = true;
+            this.guna2GradientButton1.BorderColor = System.Drawing.Color.RosyBrown;
+            this.guna2GradientButton1.BorderRadius = 5;
+            this.guna2GradientButton1.BorderThickness = 2;
+            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline);
+            this.guna2GradientButton1.ForeColor = System.Drawing.Color.ForestGreen;
+            this.guna2GradientButton1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.guna2GradientButton1.Location = new System.Drawing.Point(1264, 632);
+            this.guna2GradientButton1.Name = "guna2GradientButton1";
+            this.guna2GradientButton1.Size = new System.Drawing.Size(180, 45);
+            this.guna2GradientButton1.TabIndex = 3;
+            this.guna2GradientButton1.Text = "Back";
+            this.guna2GradientButton1.Click += new System.EventHandler(this.Addbtn_Click);
+            // 
             // PlayerPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -358,11 +394,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1495, 728);
+            this.Controls.Add(this.guna2GradientButton1);
             this.Controls.Add(this.Addbtn);
             this.Controls.Add(this.Codetxt);
             this.Controls.Add(this.labFriend);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.Matchlbl);
             this.Controls.Add(this.Friendlbl);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
@@ -399,5 +437,7 @@
         private System.Windows.Forms.Label Friendlbl;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2DataGridView MatchDGV;
+        private System.Windows.Forms.Label Matchlbl;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
     }
 }
