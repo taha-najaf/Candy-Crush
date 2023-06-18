@@ -51,7 +51,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.MatchDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Matchlbl = new System.Windows.Forms.Label();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.Logoutbtn = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.InfODataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FriendsDatagridview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MatchDGV)).BeginInit();
@@ -365,27 +365,28 @@
             this.Matchlbl.TabIndex = 1;
             this.Matchlbl.Text = "No Matches found.";
             // 
-            // guna2GradientButton1
+            // Logoutbtn
             // 
-            this.guna2GradientButton1.Animated = true;
-            this.guna2GradientButton1.BorderColor = System.Drawing.Color.RosyBrown;
-            this.guna2GradientButton1.BorderRadius = 5;
-            this.guna2GradientButton1.BorderThickness = 2;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline);
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.guna2GradientButton1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(1264, 632);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(180, 45);
-            this.guna2GradientButton1.TabIndex = 3;
-            this.guna2GradientButton1.Text = "Back";
-            this.guna2GradientButton1.Click += new System.EventHandler(this.Addbtn_Click);
+            this.Logoutbtn.Animated = true;
+            this.Logoutbtn.BorderColor = System.Drawing.Color.IndianRed;
+            this.Logoutbtn.BorderRadius = 5;
+            this.Logoutbtn.BorderThickness = 2;
+            this.Logoutbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Logoutbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Logoutbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Logoutbtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Logoutbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Logoutbtn.FillColor = System.Drawing.Color.RoyalBlue;
+            this.Logoutbtn.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Logoutbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline);
+            this.Logoutbtn.ForeColor = System.Drawing.Color.Crimson;
+            this.Logoutbtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.Logoutbtn.Location = new System.Drawing.Point(1264, 632);
+            this.Logoutbtn.Name = "Logoutbtn";
+            this.Logoutbtn.Size = new System.Drawing.Size(180, 45);
+            this.Logoutbtn.TabIndex = 3;
+            this.Logoutbtn.Text = "Logout";
+            this.Logoutbtn.Click += new System.EventHandler(this.Logoutbtn_Click);
             // 
             // PlayerPanel
             // 
@@ -394,7 +395,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1495, 728);
-            this.Controls.Add(this.guna2GradientButton1);
+            this.Controls.Add(this.Logoutbtn);
             this.Controls.Add(this.Addbtn);
             this.Controls.Add(this.Codetxt);
             this.Controls.Add(this.labFriend);
@@ -438,6 +439,6 @@
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2DataGridView MatchDGV;
         private System.Windows.Forms.Label Matchlbl;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton Logoutbtn;
     }
 }

@@ -128,5 +128,14 @@ namespace Candy_Crush
             }
             MatchDGV.DataSource = table;
         }
+
+        private void Logoutbtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+            Team_Alone team_Alone =  new Team_Alone(Player);
+            team_Alone.ShowDialog();
+            
+        }
     }
 }
