@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Net.Sockets;
 
 namespace Candy_Crush
 {
+    [Table("Friends")]
     public class Friends
     {
-        public int PlayerID { get; set; }
-        public int FriendPlayerID { get; set; }
-        public string FriendCode { get; set; }
-        public string FriendName { get; set; }
-        public string FriendFamily { get; set; }
-        public int record { get; set; }
-        public int Number_Of_Games_Played { get; set; }
-        public int Wins { get; set; }
-        public int Loses { get; set; }
+        [Key]
+        public int FriendshipId { get; set; }
+        public int PlayerId { get; set; }
+        public int FriendId { get; set; }
     }
 }

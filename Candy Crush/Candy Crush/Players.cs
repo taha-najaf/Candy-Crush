@@ -17,6 +17,7 @@ namespace Candy_Crush
         public int Number_Of_Games_Played { get; set;}
         public int Wins { get; set; }
         public int Loses { get; set; }
+       // public List<Players> Friends { get; set; }=new List<Players>();
         public string Code { get; set; }
       //  public List <Matches> Matches { get; set; }=new List<Matches>();
         public Players() { }

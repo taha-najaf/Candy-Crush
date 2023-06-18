@@ -34,6 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.SinglePlaybtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PlayGroupbtn = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SuspendLayout();
             // 
             // label1
@@ -63,7 +64,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Green;
-            this.label3.Location = new System.Drawing.Point(28, 61);
+            this.label3.Location = new System.Drawing.Point(30, 128);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(395, 36);
             this.label3.TabIndex = 0;
@@ -105,12 +106,33 @@
             this.PlayGroupbtn.Text = "Play";
             this.PlayGroupbtn.Click += new System.EventHandler(this.PlayGroupbtn_Click);
             // 
+            // guna2GradientButton1
+            // 
+            this.guna2GradientButton1.Animated = true;
+            this.guna2GradientButton1.BorderColor = System.Drawing.Color.White;
+            this.guna2GradientButton1.BorderRadius = 3;
+            this.guna2GradientButton1.BorderThickness = 3;
+            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton1.Location = new System.Drawing.Point(109, 13);
+            this.guna2GradientButton1.Name = "guna2GradientButton1";
+            this.guna2GradientButton1.Size = new System.Drawing.Size(222, 55);
+            this.guna2GradientButton1.TabIndex = 2;
+            this.guna2GradientButton1.Text = "Personal Panel";
+            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
+            // 
             // Team_Alone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(469, 374);
+            this.Controls.Add(this.guna2GradientButton1);
             this.Controls.Add(this.PlayGroupbtn);
             this.Controls.Add(this.SinglePlaybtn);
             this.Controls.Add(this.label2);
@@ -134,5 +156,6 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2CircleButton SinglePlaybtn;
         private Guna.UI2.WinForms.Guna2CircleButton PlayGroupbtn;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
     }
 }

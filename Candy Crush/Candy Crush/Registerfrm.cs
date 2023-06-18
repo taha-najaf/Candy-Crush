@@ -27,13 +27,14 @@ namespace Candy_Crush
             string username=usernametxt.Text;
             string code=GenerateRandomCode();
             Players player = new Players(name,family,username,password,code);
+
             
             db.Players.Add(player);
             db.SaveChanges();
-            MessageBox.Show($"You are registered and your code is:{player.Code} !");
-            this.Hide();
+            MessageBox.Show($"You are registered and your code is:{player.Code} !","Register",MessageBoxButtons.OK);            
             Team_Alone team_Alone =new Team_Alone(player);
-            team_Alone.Show();
+            team_Alone.ShowDialog();
+            this.Close();
 
         }
 

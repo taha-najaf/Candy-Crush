@@ -38,5 +38,12 @@ namespace Candy_Crush
 
             this.Close();
         }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            PlayerPanel playerPanel=new PlayerPanel(player);
+            playerPanel.Show();
+            this.Hide();
+        }
     }
 }

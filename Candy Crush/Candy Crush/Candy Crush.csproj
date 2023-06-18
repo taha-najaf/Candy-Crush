@@ -65,6 +65,7 @@
     <Compile Include="Candy.cs" />
     <Compile Include="CandyCrushBoard.cs" />
     <Compile Include="DataBase.cs" />
+    <Compile Include="Friends.cs" />
     <Compile Include="Loginfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +79,17 @@
       <DependentUpon>MainGame.cs</DependentUpon>
     </Compile>
     <Compile Include="Matches.cs" />
+    <Compile Include="Migrations\202306182115119_InitialCreate.cs" />
+    <Compile Include="Migrations\202306182115119_InitialCreate.designer.cs">
+      <DependentUpon>202306182115119_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PlayerPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerPanel.Designer.cs">
+      <DependentUpon>PlayerPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Players.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
@@ -99,6 +111,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainGame.resx">
       <DependentUpon>MainGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306182115119_InitialCreate.resx">
+      <DependentUpon>202306182115119_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerPanel.resx">
+      <DependentUpon>PlayerPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
