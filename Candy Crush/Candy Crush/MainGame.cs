@@ -227,11 +227,12 @@ namespace Candy_Crush
             if (remainigTime <= 0)
             {
                 timer1.Stop();
-                MessageBox.Show("Time is up!");
+                MessageBox.Show($"Time is up! you can't have any more movement.Your score is :{lblscore.Text}","Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 foreach (var item in board)
                 {
                     item.Enabled = false;
                 }
+                if ()
             }
 
         }
