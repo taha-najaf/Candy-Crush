@@ -34,11 +34,9 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbltime = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBoxBoard = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Resetbtn = new Guna.UI2.WinForms.Guna2GradientButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBoard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.CrushTimer = new System.Windows.Forms.Timer(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblscore
@@ -47,7 +45,7 @@
             this.lblscore.BackColor = System.Drawing.Color.Coral;
             this.lblscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblscore.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblscore.Location = new System.Drawing.Point(783, 19);
+            this.lblscore.Location = new System.Drawing.Point(781, 9);
             this.lblscore.Name = "lblscore";
             this.lblscore.Size = new System.Drawing.Size(88, 32);
             this.lblscore.TabIndex = 2;
@@ -79,26 +77,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Remaining Time:";
             // 
-            // pictureBoxBoard
-            // 
-            this.pictureBoxBoard.Location = new System.Drawing.Point(478, 69);
-            this.pictureBoxBoard.Name = "pictureBoxBoard";
-            this.pictureBoxBoard.Size = new System.Drawing.Size(779, 662);
-            this.pictureBoxBoard.TabIndex = 1;
-            this.pictureBoxBoard.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::Candy_Crush.Properties.Resources.background;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1862, 792);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // Resetbtn
             // 
             this.Resetbtn.Animated = true;
@@ -119,40 +97,49 @@
             this.Resetbtn.Size = new System.Drawing.Size(159, 62);
             this.Resetbtn.TabIndex = 5;
             this.Resetbtn.Text = "Reset";
-            this.Resetbtn.Click += new System.EventHandler(this.Resetbtn_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Coral;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(671, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 32);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Score:";
             // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1862, 792);
+            this.BackgroundImage = global::Candy_Crush.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1582, 653);
             this.Controls.Add(this.Resetbtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbltime);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblscore);
-            this.Controls.Add(this.pictureBoxBoard);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainGame";
             this.Load += new System.EventHandler(this.MainGame_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBoard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBoxBoard;
         private System.Windows.Forms.Label lblscore;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lbltime;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2GradientButton Resetbtn;
+        private System.Windows.Forms.Timer CrushTimer;
+        private System.Windows.Forms.Label label2;
     }
 }
