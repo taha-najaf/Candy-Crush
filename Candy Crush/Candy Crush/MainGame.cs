@@ -401,7 +401,22 @@ namespace Candy_Crush
 
         private void Resetbtn_Click_1(object sender, EventArgs e)
         {
+            // Reset score
+            score = 0;
+            lblscore.Text = "0";
 
+            // Reset timer
+            elapsedTime = 0;
+            timer1.Start();
+
+            // Reset candies on the board
+            for (int r = 0; r < rows; r++)
+            {
+                for (int c = 0; c < columns; c++)
+                {
+                    board[r, c].ImageLocation = GetRandomCandy(r, c);
+                }
+            }
         }
     }
 }
