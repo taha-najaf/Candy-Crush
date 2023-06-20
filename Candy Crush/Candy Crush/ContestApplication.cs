@@ -15,9 +15,8 @@ namespace Candy_Crush
         public int UserId { get; set; }
         
 
-        public ContestApplication(int applicantId, int userId,int friendId)
+        public ContestApplication( int userId,int friendId)
         {
-            ApplicantId = applicantId;
             UserId = userId;
             FriendId = friendId;
         }

@@ -59,7 +59,7 @@ namespace Candy_Crush
                     .ToList();
         }
         //contest application methods
-        public void SaveContestApplication(ContestApplication contestApplication)
+        public void AddContestApplication(ContestApplication contestApplication)
         {
             contestApplications.Add(contestApplication);
             SaveChanges() ;

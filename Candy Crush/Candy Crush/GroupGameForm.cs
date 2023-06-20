@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,6 +27,13 @@ namespace Candy_Crush
         {
             contestApplications =db.GetContestApplications(player.Id);
             CalDataGridview.DataSource = contestApplications;
+            showFriendInfo();
+            if (FriendsDatagridview.Rows.Count == 0)
+                Friendlbl.Text = "No friends found.";
+            else
+              Friendlbl.Text = string.Empty;
+
+ 
         }
 
         private void Acceptbtn_Click(object sender, EventArgs e)
@@ -50,6 +58,40 @@ namespace Candy_Crush
             var SellectedCA = contestApplications.Where(I => I.ApplicantId == Aid).FirstOrDefault();
             db.RemoveContestApplication(SellectedCA) ;
             MessageBox.Show("Contest application rejected!");
+        }
+
+        private void showFriendInfo()
+        {
+            List<Players> players = new List<Players>();
+            players = db.GetFriends(player.Id);
+            DataTable table = new DataTable();
+            table.Columns.Add("Id");
+            table.Columns.Add("Name");
+            table.Columns.Add("Family");
+            table.Columns.Add("Code");
+
+            foreach (var player in players)
+            {
+                table.Rows.Add(player.Id, player.Name, player.Family, player.Code);
+            }
+            FriendsDatagridview.DataSource = table;
+
+        }
+
+        private void Sendbtn_Click(object sender, EventArgs e)
+        {
+            string code = Friendcodetxt.Text;
+            var friend = db.Players.FirstOrDefault(p => p.Code == code);
+            if (friend != null)
+            {
+                ContestApplication contestApplication = new ContestApplication(player.Id, friend.Id);
+                db.AddContestApplication(contestApplication);
+                MessageBox.Show("Contest application sent!");
+            }
+            else
+            {
+                MessageBox.Show("Friend not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
