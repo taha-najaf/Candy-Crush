@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Candy.cs" />
     <Compile Include="CandyCrushBoard.cs" />
+    <Compile Include="ContestApplication.cs" />
     <Compile Include="DataBase.cs" />
     <Compile Include="Friends.cs" />
     <Compile Include="Loginfrm.cs">

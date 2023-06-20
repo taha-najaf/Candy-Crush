@@ -20,6 +20,7 @@ namespace Candy_Crush
         public DbSet<Players> Players { get; set; }
         public DbSet <Friends> Friends { get; set; }
         public DbSet <Matches> Matches { get; set; }
+        public DbSet <ContestApplication> contestApplications { get; set; }
 
         // friends table methods
         public void AddFriend(int playerId, int friendId)
@@ -56,6 +57,22 @@ namespace Candy_Crush
             return Matches
                 .Where(m => m.WinnerId == playerId || m.LoserId == playerId)
                     .ToList();
+        }
+        //contest application methods
+        public void SaveContestApplication(ContestApplication contestApplication)
+        {
+            contestApplications.Add(contestApplication);
+            SaveChanges() ;
+        }
+        public void RemoveContestApplication (ContestApplication contestApplication)
+        {
+            contestApplications.Remove(contestApplication);
+            SaveChanges() ;
+        }
+
+        public List<ContestApplication> GetContestApplications(int userId)
+        {
+            return contestApplications.Where(c=>c.UserId == userId).ToList();
         }
 
     }
