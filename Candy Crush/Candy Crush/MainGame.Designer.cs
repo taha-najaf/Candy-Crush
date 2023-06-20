@@ -98,6 +98,7 @@
             this.Resetbtn.Size = new System.Drawing.Size(159, 62);
             this.Resetbtn.TabIndex = 5;
             this.Resetbtn.Text = "Reset";
+            this.Resetbtn.Click += new System.EventHandler(this.Resetbtn_Click_1);
             // 
             // label2
             // 

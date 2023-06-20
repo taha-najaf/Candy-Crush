@@ -115,41 +115,59 @@ namespace Candy_Crush
 
         private void TileMouseUp(object sender, MouseEventArgs e)
         {
-                {
-            PictureBox otherTile = (PictureBox)sender;
-            PictureBox currTile = (PictureBox)sender;
             if (e.Button == MouseButtons.Left)
             {
-                var cur=currTile.Name.Split('-');
-                var target=otherTile.Name.Split('-');
-                int r =int.Parse( cur[0]);
-                int c =int.Parse(cur[1]);
+                PictureBox currentTile = (PictureBox)sender;
+                PictureBox otherTile = GetNeighbor(currentTile);
 
-                int r2 = int.Parse(cur[0]);
-                int c2 = int.Parse(cur[1]);
+                if (otherTile!=null && CheckValid())
                 
-                bool moveL=(c2==c-1 && r==r2);
-                bool moveR= (c2==c+1 && r==r2);
-                bool moveU= (c2==c && (r-1==r2));
-                bool moveD=(c2==c && (r+1==r2));
-
-                bool isAdjacent=moveL || moveR || moveU || moveD;
-
-                if (isAdjacent)
                 {
-                    string currImg = currTile.ImageLocation;
+                    // Swap the image locations
+                    string currentImg = currentTile.ImageLocation;
                     string otherImg = otherTile.ImageLocation;
-                    currTile.ImageLocation = otherImg;
-                    otherTile.ImageLocation = currImg;
+                    currentTile.ImageLocation = otherImg;
+                    otherTile.ImageLocation = currentImg;
 
-                    if (!CheckValid())
-                    {
-                        currTile.ImageLocation = otherImg;
-                        otherTile.ImageLocation = currImg;
-                    }
+                    //if (!CheckValid())
+                    //{
+                    //    // Swap back if not valid
+                    //    currentTile.ImageLocation = currentImg;
+                    //    otherTile.ImageLocation = otherImg;
+                    //}
                 }
             }
+        }
+        private PictureBox GetNeighbor(PictureBox tile)
+        {
+            int row = int.Parse(tile.Name.Split('-')[0]);
+            int col = int.Parse(tile.Name.Split('-')[1]);
+
+            // Check left neighbor
+            if (col > 0 && !board[row, col - 1].ImageLocation.Contains("blank"))
+            {
+                return board[row, col - 1];
             }
+
+            // Check right neighbor
+            if (col < columns - 1 && !board[row, col + 1].ImageLocation.Contains("blank"))
+            {
+                return board[row, col + 1];
+            }
+
+            // Check top neighbor
+            if (row > 0 && !board[row - 1, col].ImageLocation.Contains("blank"))
+            {
+                return board[row - 1, col];
+            }
+
+            // Check bottom neighbor
+            if (row < rows - 1 && !board[row + 1, col].ImageLocation.Contains("blank"))
+            {
+                return board[row + 1, col];
+            }
+
+            return null; // No valid neighbor found
         }
         private void TileDragEnter(object sender, DragEventArgs e)
         {
@@ -379,6 +397,11 @@ namespace Candy_Crush
             Team_Alone team_Alone =new Team_Alone(Player);
             team_Alone.ShowDialog();
             
+        }
+
+        private void Resetbtn_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
