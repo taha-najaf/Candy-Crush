@@ -37,6 +37,7 @@
             this.Resetbtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.CrushTimer = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
+            this.Savebtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SuspendLayout();
             // 
             // lblscore
@@ -47,9 +48,9 @@
             this.lblscore.ForeColor = System.Drawing.SystemColors.Control;
             this.lblscore.Location = new System.Drawing.Point(781, 9);
             this.lblscore.Name = "lblscore";
-            this.lblscore.Size = new System.Drawing.Size(88, 32);
+            this.lblscore.Size = new System.Drawing.Size(46, 32);
             this.lblscore.TabIndex = 2;
-            this.lblscore.Text = "Score";
+            this.lblscore.Text = "45";
             // 
             // timer1
             // 
@@ -110,6 +111,28 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Score:";
             // 
+            // Savebtn
+            // 
+            this.Savebtn.Animated = true;
+            this.Savebtn.BackColor = System.Drawing.Color.Transparent;
+            this.Savebtn.BorderColor = System.Drawing.Color.Gray;
+            this.Savebtn.BorderRadius = 4;
+            this.Savebtn.BorderThickness = 3;
+            this.Savebtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Savebtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Savebtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Savebtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Savebtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Savebtn.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Savebtn.ForeColor = System.Drawing.Color.White;
+            this.Savebtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.Savebtn.Location = new System.Drawing.Point(1375, 553);
+            this.Savebtn.Name = "Savebtn";
+            this.Savebtn.Size = new System.Drawing.Size(159, 62);
+            this.Savebtn.TabIndex = 6;
+            this.Savebtn.Text = "Save";
+            this.Savebtn.Click += new System.EventHandler(this.Savebtn_Click);
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -117,6 +140,7 @@
             this.BackgroundImage = global::Candy_Crush.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1582, 653);
+            this.Controls.Add(this.Savebtn);
             this.Controls.Add(this.Resetbtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbltime);
@@ -141,5 +165,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton Resetbtn;
         private System.Windows.Forms.Timer CrushTimer;
         private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2GradientButton Savebtn;
     }
 }

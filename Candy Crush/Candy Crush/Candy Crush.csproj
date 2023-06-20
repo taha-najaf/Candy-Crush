@@ -65,10 +65,6 @@
     <Compile Include="Candy.cs" />
     <Compile Include="CandyCrushBoard.cs" />
     <Compile Include="DataBase.cs" />
-    <Compile Include="Form1.cs" />
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Friends.cs" />
     <Compile Include="Loginfrm.cs">
       <SubType>Form</SubType>
@@ -110,9 +106,6 @@
     <Compile Include="Team_Alone.Designer.cs">
       <DependentUpon>Team_Alone.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Loginfrm.resx">
       <DependentUpon>Loginfrm.cs</DependentUpon>
     </EmbeddedResource>

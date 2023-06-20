@@ -108,6 +108,7 @@ namespace Candy_Crush
                     , player.Loses, player.Code);
             }
             FriendsDatagridview.DataSource = table;
+            InfODataGridView.Refresh();
 
         }
 
@@ -127,6 +128,7 @@ namespace Candy_Crush
                 table.Rows.Add(item.MatchId, item.WinnerId, item.LoserId,item.Draw);
             }
             MatchDGV.DataSource = table;
+            InfODataGridView.Refresh();
         }
 
         private void Logoutbtn_Click(object sender, EventArgs e)

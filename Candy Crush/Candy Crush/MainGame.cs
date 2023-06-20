@@ -9,22 +9,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace Candy_Crush
 {
     public partial class MainGame : Form
     {
+        DataBase db=new DataBase();
         private PictureBox[,] board;
         private int rows = 9;
         private int columns = 9;
         private string[] candies = { "Blue", "Orange", "Green", "Yellow", "Red", "Purple" };
         private Random random;
-        private Players player;
+        private Players Player;
         private int score=0;
+       
         public MainGame(Players players)
         {
             InitializeComponent();
-            this.player = players;
+            Player = players;
         }
 
         private void MainGame_Load(object sender, EventArgs e)
@@ -33,6 +36,8 @@ namespace Candy_Crush
             timer1.Start();
             CrushTimer.Tick += TimerTick;
             CrushTimer.Start();
+            //this.FormClosing += MainGame_FormClosing;
+            //SaveScore();
         }
 
         private void StartGame()
@@ -232,7 +237,16 @@ namespace Candy_Crush
                 {
                     item.Enabled = false;
                 }
-                if ()
+
+
+                //if (Player.record==0)
+                //    Player.record=int.Parse(lblscore.Text);
+                //else if (Player.record < int.Parse(lblscore.Text))
+                //    {
+                //        Player.record = int.Parse(lblscore.Text);
+                //        db.SaveChanges();
+                //    }
+
             }
 
         }
@@ -328,15 +342,43 @@ namespace Candy_Crush
 
 
         private void GenerateCandy()
-    {
-        for (int c = 0; c < columns; c++)
         {
-            if (board[0, c].ImageLocation.Contains("blank"))
+            for (int c = 0; c < columns; c++)
             {
-                board[0, c].ImageLocation = "D:\\programming\\Projects\\Candy Crush\\Candy Crush\\Images\\candy\\" + GetRandomCandy(0,c) + ".png";
+                if (board[0, c].ImageLocation.Contains("blank"))
+                {
+                    board[0, c].ImageLocation = "D:\\programming\\Projects\\Candy Crush\\Candy Crush\\Images\\candy\\" + GetRandomCandy(0, c) + ".png";
+                }
             }
         }
-    }
 
+        private void SaveScore()
+        {
+            int currentScore = int.Parse(lblscore.Text);
+            int gamesPlayed = Player.Number_Of_Games_Played + 1;
+
+            using (var db = new DataBase())
+            {
+                var player = db.Players.Find(Player.Id); // Assuming there's an Id property for the player
+
+                if (player != null)
+                {
+                    player.record = currentScore;
+                    player.Number_Of_Games_Played = gamesPlayed;
+
+                    db.SaveChanges(); // Save changes to the database
+                }
+            }
+        }
+
+        private void Savebtn_Click(object sender, EventArgs e)
+        {
+            SaveScore();
+            CrushTimer.Stop();
+            this.Close();
+            Team_Alone team_Alone =new Team_Alone(Player);
+            team_Alone.ShowDialog();
+            
+        }
     }
 }
