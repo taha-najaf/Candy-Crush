@@ -67,6 +67,12 @@
     <Compile Include="ContestApplication.cs" />
     <Compile Include="DataBase.cs" />
     <Compile Include="Friends.cs" />
+    <Compile Include="GroupGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupGameForm.Designer.cs">
+      <DependentUpon>GroupGameForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Loginfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     <Compile Include="Team_Alone.Designer.cs">
       <DependentUpon>Team_Alone.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="GroupGameForm.resx">
+      <DependentUpon>GroupGameForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loginfrm.resx">
       <DependentUpon>Loginfrm.cs</DependentUpon>
     </EmbeddedResource>

@@ -47,9 +47,9 @@ namespace Candy_Crush
         }
 
         //Match table
-        public void AddMatch(int winerId, int loserId)
+        public void AddMatch(Matches match)
         {
-            Matches.Add(new Matches { WinnerId=winerId,LoserId=loserId });
+            Matches.Add(match);
             SaveChanges();
         }
         public List<Matches> GetMatches(int playerId)
