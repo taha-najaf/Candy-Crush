@@ -36,6 +36,7 @@ namespace Candy_Crush
             timer1.Start();
             CrushTimer.Tick += TimerTick;
             CrushTimer.Start();
+            MessageBox.Show("You shoul score 1500 or more to win the game");
             //this.FormClosing += MainGame_FormClosing;
             //SaveScore();
         }
@@ -256,15 +257,6 @@ namespace Candy_Crush
                     item.Enabled = false;
                 }
 
-
-                //if (Player.record==0)
-                //    Player.record=int.Parse(lblscore.Text);
-                //else if (Player.record < int.Parse(lblscore.Text))
-                //    {
-                //        Player.record = int.Parse(lblscore.Text);
-                //        db.SaveChanges();
-                //    }
-
             }
 
         }
@@ -275,6 +267,13 @@ namespace Candy_Crush
             CrushThree();
             
             lblscore.Text = score.ToString();
+            //if (score >= 1500)
+            //{
+            //    foreach (var item in board)
+            //    {
+            //        item.Enabled = false;
+            //    }
+            //}
 
         }
 
@@ -381,8 +380,13 @@ namespace Candy_Crush
 
                 if (player != null)
                 {
-                    player.record = currentScore;
+                    if (currentScore >player.record)
+                        player.record = currentScore;
                     player.Number_Of_Games_Played = gamesPlayed;
+                    if (currentScore >= 1500)
+                        player.Wins++;
+                    else
+                        player.Loses++;
 
                     db.SaveChanges(); // Save changes to the database
                 }
