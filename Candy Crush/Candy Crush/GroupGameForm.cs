@@ -26,7 +26,7 @@ namespace Candy_Crush
         private void GroupGameForm_Load(object sender, EventArgs e)
         {
             contestApplications =db.GetContestApplications(player.Id);
-            CalDataGridview.DataSource = contestApplications;
+            ShowApplicants();
             showFriendInfo();
             if (FriendsDatagridview.Rows.Count == 0)
                 Friendlbl.Text = "No friends found.";
@@ -35,7 +35,27 @@ namespace Candy_Crush
 
  
         }
+        private void ShowApplicants()
+        {
+            contestApplications = db.GetContestApplications(player.Id);
+            DataTable table = new DataTable();
+            table.Columns.Add("ApplicantId");
+            table.Columns.Add("Sender Name");
+            table.Columns.Add("Sender Family");
+            table.Columns.Add("Sender Code");
+            var FriendIds =contestApplications.Select(x => x.FriendId).ToList();
+            foreach (var contestApplication in contestApplications)
+            {
+                var sender = db.Players.FirstOrDefault(p => p.Id == contestApplication.FriendId);
+                if (sender != null)
+                {
+                    // Add the applicant details to the table
+                    table.Rows.Add(contestApplication.ApplicantId, sender.Name, sender.Family, sender.Code);
+                }
+            }
+            CalDataGridview.DataSource=table;
 
+        }
         private void Acceptbtn_Click(object sender, EventArgs e)
         {
             if (ApplicantId.Text!=string.Empty)

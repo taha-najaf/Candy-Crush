@@ -125,7 +125,7 @@ namespace Candy_Crush
 
             foreach (var item in matches)
             {
-                table.Rows.Add(item.MatchId, item.WinnerId, item.LoserId,item.Draw);
+                table.Rows.Add(item.MatchId, item.WinnerId, item.LoserId,item.IsDraw);
             }
             MatchDGV.DataSource = table;
             InfODataGridView.Refresh();

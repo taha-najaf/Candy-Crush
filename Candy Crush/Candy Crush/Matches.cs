@@ -13,7 +13,6 @@ namespace Candy_Crush
         public int MatchId { get; set; }
         public int Player1Id { get; set; }
         public int Player2Id { get; set; }
-        public string Draw { get; set; }
         public int? LoserId { get; set; }
         public int? WinnerId { get; set; }
         public bool IsDraw { get; set; }
@@ -39,6 +38,7 @@ namespace Candy_Crush
             LoserId = null; // Reset loser when match is a draw
             IsDraw = true;
         }
+        public Matches() { }
     }
 
 }

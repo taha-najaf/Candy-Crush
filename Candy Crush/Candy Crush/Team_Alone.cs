@@ -37,6 +37,8 @@ namespace Candy_Crush
             MessageBox.Show($"Your code for playing with your friends is {player.Code}","Code",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             this.Close();
+            GroupGameForm gameForm = new GroupGameForm(player);
+            gameForm.ShowDialog();
         }
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)

@@ -13,8 +13,10 @@ namespace Candy_Crush
         public int ApplicantId { get; set; }
         public int FriendId { get; set; }
         public int UserId { get; set; }
-        
 
+        public ContestApplication()
+        {
+        }
         public ContestApplication( int userId,int friendId)
         {
             UserId = userId;
