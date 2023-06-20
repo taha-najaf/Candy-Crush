@@ -18,7 +18,14 @@ namespace Candy_Crush
         public int? WinnerId { get; set; }
         public bool IsDraw { get; set; }
 
-
+        public Matches( int player1Id, int player2Id)
+        {
+            Player1Id = player1Id;
+            Player2Id = player2Id;
+            WinnerId = null; // Initialize as null, indicating no winner yet
+            LoserId = null; // Initialize as null, indicating no loser yet
+            IsDraw = false; // Initialize as false, indicating not a draw yet
+        }
         public void SetWinnerAndLoser(int winnerId, int loserId)
         {
             WinnerId = winnerId;

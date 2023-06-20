@@ -34,9 +34,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupGameForm));
             this.label1 = new System.Windows.Forms.Label();
             this.CalDataGridview = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.ApplicantId = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Acceptbtn = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.RejectAPbtn = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.CalDataGridview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,72 +107,74 @@
             this.CalDataGridview.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.CalDataGridview.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // guna2TextBox1
+            // ApplicantId
             // 
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.BorderRadius = 3;
-            this.guna2TextBox1.BorderThickness = 3;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(813, 102);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Applicant Id";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(231, 45);
-            this.guna2TextBox1.TabIndex = 2;
+            this.ApplicantId.Animated = true;
+            this.ApplicantId.BorderColor = System.Drawing.Color.Gray;
+            this.ApplicantId.BorderRadius = 3;
+            this.ApplicantId.BorderThickness = 3;
+            this.ApplicantId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ApplicantId.DefaultText = "";
+            this.ApplicantId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.ApplicantId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.ApplicantId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ApplicantId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ApplicantId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ApplicantId.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ApplicantId.ForeColor = System.Drawing.Color.Black;
+            this.ApplicantId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ApplicantId.Location = new System.Drawing.Point(813, 102);
+            this.ApplicantId.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.ApplicantId.Name = "ApplicantId";
+            this.ApplicantId.PasswordChar = '\0';
+            this.ApplicantId.PlaceholderText = "Applicant Id";
+            this.ApplicantId.SelectedText = "";
+            this.ApplicantId.Size = new System.Drawing.Size(231, 45);
+            this.ApplicantId.TabIndex = 2;
             // 
-            // guna2GradientButton1
+            // Acceptbtn
             // 
-            this.guna2GradientButton1.Animated = true;
-            this.guna2GradientButton1.BorderColor = System.Drawing.Color.Gray;
-            this.guna2GradientButton1.BorderRadius = 3;
-            this.guna2GradientButton1.BorderThickness = 3;
-            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Yellow;
-            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton1.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(1080, 102);
-            this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(180, 45);
-            this.guna2GradientButton1.TabIndex = 3;
-            this.guna2GradientButton1.Text = "Accept";
+            this.Acceptbtn.Animated = true;
+            this.Acceptbtn.BorderColor = System.Drawing.Color.Gray;
+            this.Acceptbtn.BorderRadius = 3;
+            this.Acceptbtn.BorderThickness = 3;
+            this.Acceptbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Acceptbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Acceptbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Acceptbtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Acceptbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Acceptbtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.Acceptbtn.FillColor2 = System.Drawing.Color.Yellow;
+            this.Acceptbtn.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Acceptbtn.ForeColor = System.Drawing.Color.Black;
+            this.Acceptbtn.Location = new System.Drawing.Point(1080, 102);
+            this.Acceptbtn.Name = "Acceptbtn";
+            this.Acceptbtn.Size = new System.Drawing.Size(180, 45);
+            this.Acceptbtn.TabIndex = 3;
+            this.Acceptbtn.Text = "Accept";
+            this.Acceptbtn.Click += new System.EventHandler(this.Acceptbtn_Click);
             // 
-            // guna2GradientButton2
+            // RejectAPbtn
             // 
-            this.guna2GradientButton2.BorderColor = System.Drawing.Color.DimGray;
-            this.guna2GradientButton2.BorderRadius = 5;
-            this.guna2GradientButton2.BorderThickness = 3;
-            this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton2.FillColor = System.Drawing.Color.Red;
-            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(1286, 102);
-            this.guna2GradientButton2.Name = "guna2GradientButton2";
-            this.guna2GradientButton2.Size = new System.Drawing.Size(180, 45);
-            this.guna2GradientButton2.TabIndex = 3;
-            this.guna2GradientButton2.Text = "Reject";
+            this.RejectAPbtn.BorderColor = System.Drawing.Color.DimGray;
+            this.RejectAPbtn.BorderRadius = 5;
+            this.RejectAPbtn.BorderThickness = 3;
+            this.RejectAPbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.RejectAPbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.RejectAPbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.RejectAPbtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.RejectAPbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.RejectAPbtn.FillColor = System.Drawing.Color.Red;
+            this.RejectAPbtn.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.RejectAPbtn.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.RejectAPbtn.ForeColor = System.Drawing.Color.White;
+            this.RejectAPbtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.RejectAPbtn.Location = new System.Drawing.Point(1286, 102);
+            this.RejectAPbtn.Name = "RejectAPbtn";
+            this.RejectAPbtn.Size = new System.Drawing.Size(180, 45);
+            this.RejectAPbtn.TabIndex = 3;
+            this.RejectAPbtn.Text = "Reject";
+            this.RejectAPbtn.Click += new System.EventHandler(this.RejectAPbtn_Click);
             // 
             // GroupGameForm
             // 
@@ -180,14 +182,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(1514, 722);
-            this.Controls.Add(this.guna2GradientButton2);
-            this.Controls.Add(this.guna2GradientButton1);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.RejectAPbtn);
+            this.Controls.Add(this.Acceptbtn);
+            this.Controls.Add(this.ApplicantId);
             this.Controls.Add(this.CalDataGridview);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GroupGameForm";
             this.Text = "GroupGameForm";
+            this.Load += new System.EventHandler(this.GroupGameForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CalDataGridview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -198,8 +201,8 @@
 
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DataGridView CalDataGridview;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
+        private Guna.UI2.WinForms.Guna2TextBox ApplicantId;
+        private Guna.UI2.WinForms.Guna2GradientButton Acceptbtn;
+        private Guna.UI2.WinForms.Guna2GradientButton RejectAPbtn;
     }
 }
