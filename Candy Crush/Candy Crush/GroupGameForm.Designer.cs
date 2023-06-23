@@ -34,6 +34,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GroupGameForm));
             this.label1 = new System.Windows.Forms.Label();
             this.CalDataGridview = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -46,8 +49,15 @@
             this.Friendcodetxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.Sendbtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label3 = new System.Windows.Forms.Label();
+            this.PendingMatchDataGridview = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.MatchIDtxt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.CalDataGridview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FriendsDatagridview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PendingMatchDataGridview)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -60,6 +70,7 @@
             this.label1.Size = new System.Drawing.Size(327, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Contest Applications List";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // CalDataGridview
             // 
@@ -266,6 +277,7 @@
             this.FriendsDatagridview.ThemeStyle.RowsStyle.Height = 24;
             this.FriendsDatagridview.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.FriendsDatagridview.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.FriendsDatagridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FriendsDatagridview_CellContentClick);
             // 
             // Friendcodetxt
             // 
@@ -287,7 +299,7 @@
             this.Friendcodetxt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Friendcodetxt.Name = "Friendcodetxt";
             this.Friendcodetxt.PasswordChar = '\0';
-            this.Friendcodetxt.PlaceholderText = "Friend Id";
+            this.Friendcodetxt.PlaceholderText = "Friend code";
             this.Friendcodetxt.SelectedText = "";
             this.Friendcodetxt.Size = new System.Drawing.Size(231, 45);
             this.Friendcodetxt.TabIndex = 2;
@@ -325,6 +337,157 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Enter code of\r\nyour friend\r\nto send request\r\n";
             // 
+            // PendingMatchDataGridview
+            // 
+            this.PendingMatchDataGridview.AllowUserToAddRows = false;
+            this.PendingMatchDataGridview.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.PendingMatchDataGridview.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.PendingMatchDataGridview.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(100)))), ((int)(((byte)(110)))));
+            this.PendingMatchDataGridview.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PendingMatchDataGridview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.PendingMatchDataGridview.ColumnHeadersHeight = 20;
+            this.PendingMatchDataGridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.PendingMatchDataGridview.DefaultCellStyle = dataGridViewCellStyle9;
+            this.PendingMatchDataGridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.PendingMatchDataGridview.Location = new System.Drawing.Point(12, 465);
+            this.PendingMatchDataGridview.Name = "PendingMatchDataGridview";
+            this.PendingMatchDataGridview.ReadOnly = true;
+            this.PendingMatchDataGridview.RowHeadersVisible = false;
+            this.PendingMatchDataGridview.RowHeadersWidth = 51;
+            this.PendingMatchDataGridview.RowTemplate.Height = 24;
+            this.PendingMatchDataGridview.Size = new System.Drawing.Size(761, 134);
+            this.PendingMatchDataGridview.TabIndex = 4;
+            this.PendingMatchDataGridview.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.PendingMatchDataGridview.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.PendingMatchDataGridview.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.PendingMatchDataGridview.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.PendingMatchDataGridview.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.PendingMatchDataGridview.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(100)))), ((int)(((byte)(110)))));
+            this.PendingMatchDataGridview.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.PendingMatchDataGridview.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.PendingMatchDataGridview.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.PendingMatchDataGridview.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PendingMatchDataGridview.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.PendingMatchDataGridview.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.PendingMatchDataGridview.ThemeStyle.HeaderStyle.Height = 20;
+            this.PendingMatchDataGridview.ThemeStyle.ReadOnly = true;
+            this.PendingMatchDataGridview.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.PendingMatchDataGridview.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.PendingMatchDataGridview.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PendingMatchDataGridview.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.PendingMatchDataGridview.ThemeStyle.RowsStyle.Height = 24;
+            this.PendingMatchDataGridview.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.PendingMatchDataGridview.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.PendingMatchDataGridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Chocolate;
+            this.label5.Location = new System.Drawing.Point(14, 433);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(205, 29);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Pending Matches:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Chocolate;
+            this.label6.Location = new System.Drawing.Point(808, 496);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(141, 116);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Enter the id \r\nof match\r\nto play\r\n\r\n";
+            // 
+            // MatchIDtxt
+            // 
+            this.MatchIDtxt.Animated = true;
+            this.MatchIDtxt.BorderColor = System.Drawing.Color.Gray;
+            this.MatchIDtxt.BorderRadius = 3;
+            this.MatchIDtxt.BorderThickness = 3;
+            this.MatchIDtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.MatchIDtxt.DefaultText = "";
+            this.MatchIDtxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.MatchIDtxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.MatchIDtxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.MatchIDtxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.MatchIDtxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.MatchIDtxt.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.MatchIDtxt.ForeColor = System.Drawing.Color.Black;
+            this.MatchIDtxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.MatchIDtxt.Location = new System.Drawing.Point(1017, 526);
+            this.MatchIDtxt.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.MatchIDtxt.Name = "MatchIDtxt";
+            this.MatchIDtxt.PasswordChar = '\0';
+            this.MatchIDtxt.PlaceholderText = "Match Id";
+            this.MatchIDtxt.SelectedText = "";
+            this.MatchIDtxt.Size = new System.Drawing.Size(231, 45);
+            this.MatchIDtxt.TabIndex = 2;
+            this.MatchIDtxt.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            // 
+            // guna2GradientButton1
+            // 
+            this.guna2GradientButton1.Animated = true;
+            this.guna2GradientButton1.BorderColor = System.Drawing.Color.Gray;
+            this.guna2GradientButton1.BorderRadius = 3;
+            this.guna2GradientButton1.BorderThickness = 3;
+            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Khaki;
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.guna2GradientButton1.ForeColor = System.Drawing.Color.Black;
+            this.guna2GradientButton1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.guna2GradientButton1.Location = new System.Drawing.Point(1306, 526);
+            this.guna2GradientButton1.Name = "guna2GradientButton1";
+            this.guna2GradientButton1.Size = new System.Drawing.Size(180, 45);
+            this.guna2GradientButton1.TabIndex = 3;
+            this.guna2GradientButton1.Text = "Play";
+            this.guna2GradientButton1.Click += new System.EventHandler(this.Pendingbtn);
+            // 
+            // guna2GradientButton2
+            // 
+            this.guna2GradientButton2.BorderColor = System.Drawing.Color.DimGray;
+            this.guna2GradientButton2.BorderRadius = 5;
+            this.guna2GradientButton2.BorderThickness = 3;
+            this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton2.FillColor = System.Drawing.Color.Red;
+            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.guna2GradientButton2.Location = new System.Drawing.Point(1173, 643);
+            this.guna2GradientButton2.Name = "guna2GradientButton2";
+            this.guna2GradientButton2.Size = new System.Drawing.Size(180, 45);
+            this.guna2GradientButton2.TabIndex = 3;
+            this.guna2GradientButton2.Text = "Logout";
+            this.guna2GradientButton2.Click += new System.EventHandler(this.guna2GradientButton2_Click);
+            // 
             // GroupGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -332,12 +495,18 @@
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(1514, 722);
             this.Controls.Add(this.Friendlbl);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.PendingMatchDataGridview);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.FriendsDatagridview);
+            this.Controls.Add(this.guna2GradientButton2);
             this.Controls.Add(this.RejectAPbtn);
+            this.Controls.Add(this.guna2GradientButton1);
             this.Controls.Add(this.Sendbtn);
             this.Controls.Add(this.Acceptbtn);
+            this.Controls.Add(this.MatchIDtxt);
             this.Controls.Add(this.Friendcodetxt);
             this.Controls.Add(this.ApplicantId);
             this.Controls.Add(this.CalDataGridview);
@@ -348,6 +517,7 @@
             this.Load += new System.EventHandler(this.GroupGameForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CalDataGridview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FriendsDatagridview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PendingMatchDataGridview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,5 +536,11 @@
         private Guna.UI2.WinForms.Guna2TextBox Friendcodetxt;
         private Guna.UI2.WinForms.Guna2GradientButton Sendbtn;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2DataGridView PendingMatchDataGridview;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2TextBox MatchIDtxt;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
     }
 }

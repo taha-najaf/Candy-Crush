@@ -22,6 +22,11 @@ namespace Candy_Crush
         public DbSet <Matches> Matches { get; set; }
         public DbSet <ContestApplication> contestApplications { get; set; }
 
+        //Player methods
+        public Players GetPlayer(int playerId)
+        {
+            return Players.FirstOrDefault(p => p.Id == playerId);
+        }
         // friends table methods
         public void AddFriend(int playerId, int friendId)
         {
@@ -55,7 +60,7 @@ namespace Candy_Crush
         public List<Matches> GetMatches(int playerId)
         {
             return Matches
-                .Where(m => m.WinnerId == playerId || m.LoserId == playerId)
+                .Where(m => m.Player1Id == playerId || m.Player2Id == playerId)
                     .ToList();
         }
         //contest application methods
@@ -72,8 +77,10 @@ namespace Candy_Crush
 
         public List<ContestApplication> GetContestApplications(int userId)
         {
-            return contestApplications.Where(c=>c.UserId == userId).ToList();
+            return contestApplications.Where(c => c.ReceiverId == userId && c.SenderId != userId).ToList();
         }
 
     }
+
+
 }

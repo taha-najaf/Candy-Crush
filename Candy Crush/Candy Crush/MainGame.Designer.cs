@@ -38,6 +38,7 @@
             this.CrushTimer = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.Savebtn = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.Logoutbtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SuspendLayout();
             // 
             // lblscore
@@ -134,6 +135,28 @@
             this.Savebtn.Text = "Save";
             this.Savebtn.Click += new System.EventHandler(this.Savebtn_Click);
             // 
+            // Logoutbtn
+            // 
+            this.Logoutbtn.Animated = true;
+            this.Logoutbtn.BackColor = System.Drawing.Color.Transparent;
+            this.Logoutbtn.BorderColor = System.Drawing.Color.Gray;
+            this.Logoutbtn.BorderRadius = 4;
+            this.Logoutbtn.BorderThickness = 3;
+            this.Logoutbtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Logoutbtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Logoutbtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Logoutbtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Logoutbtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Logoutbtn.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logoutbtn.ForeColor = System.Drawing.Color.White;
+            this.Logoutbtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.Logoutbtn.Location = new System.Drawing.Point(12, 567);
+            this.Logoutbtn.Name = "Logoutbtn";
+            this.Logoutbtn.Size = new System.Drawing.Size(159, 62);
+            this.Logoutbtn.TabIndex = 5;
+            this.Logoutbtn.Text = "Logout";
+            this.Logoutbtn.Click += new System.EventHandler(this.Logoutbtn_Click);
+            // 
             // MainGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -142,6 +165,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1582, 653);
             this.Controls.Add(this.Savebtn);
+            this.Controls.Add(this.Logoutbtn);
             this.Controls.Add(this.Resetbtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbltime);
@@ -167,5 +191,6 @@
         private System.Windows.Forms.Timer CrushTimer;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2GradientButton Savebtn;
+        private Guna.UI2.WinForms.Guna2GradientButton Logoutbtn;
     }
 }

@@ -47,5 +47,12 @@ namespace Candy_Crush
             playerPanel.Show();
             this.Hide();
         }
+
+        private void Logout(object sender, EventArgs e)
+        {
+            Loginfrm loginfrm = new Loginfrm();
+            loginfrm.ShowDialog();
+            this.Close();
+        }
     }
 }

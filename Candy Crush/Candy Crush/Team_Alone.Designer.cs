@@ -35,6 +35,7 @@
             this.SinglePlaybtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PlayGroupbtn = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SuspendLayout();
             // 
             // label1
@@ -126,13 +127,34 @@
             this.guna2GradientButton1.Text = "Personal Panel";
             this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
+            // guna2GradientButton2
+            // 
+            this.guna2GradientButton2.Animated = true;
+            this.guna2GradientButton2.BorderColor = System.Drawing.Color.White;
+            this.guna2GradientButton2.BorderRadius = 3;
+            this.guna2GradientButton2.BorderThickness = 3;
+            this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton2.Location = new System.Drawing.Point(129, 367);
+            this.guna2GradientButton2.Name = "guna2GradientButton2";
+            this.guna2GradientButton2.Size = new System.Drawing.Size(222, 55);
+            this.guna2GradientButton2.TabIndex = 2;
+            this.guna2GradientButton2.Text = "Logout";
+            this.guna2GradientButton2.Click += new System.EventHandler(this.Logout);
+            // 
             // Team_Alone
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(469, 374);
+            this.ClientSize = new System.Drawing.Size(493, 434);
+            this.Controls.Add(this.guna2GradientButton2);
             this.Controls.Add(this.guna2GradientButton1);
             this.Controls.Add(this.PlayGroupbtn);
             this.Controls.Add(this.SinglePlaybtn);
@@ -159,5 +181,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton SinglePlaybtn;
         private Guna.UI2.WinForms.Guna2CircleButton PlayGroupbtn;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
     }
 }

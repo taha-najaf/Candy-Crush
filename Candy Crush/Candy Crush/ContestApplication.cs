@@ -11,16 +11,17 @@ namespace Candy_Crush
     {
         [Key]
         public int ApplicantId { get; set; }
-        public int FriendId { get; set; }
-        public int UserId { get; set; }
+        public int SenderId { get; set; }
+        public int ReceiverId { get; set; }
+     
 
         public ContestApplication()
         {
         }
         public ContestApplication( int userId,int friendId)
         {
-            UserId = userId;
-            FriendId = friendId;
+            SenderId = userId;
+            ReceiverId = friendId;
         }
     }
 }
