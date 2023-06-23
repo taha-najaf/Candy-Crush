@@ -23,11 +23,20 @@ namespace Candy_Crush
         private Random random;
         private Players Player;
         private int score=0;
+        private bool groupgame=false;
+        private Matches match = new Matches();
        
         public MainGame(Players players)
         {
             InitializeComponent();
             Player = players;
+        }
+        public MainGame(Matches matches,Players player)
+        {
+            InitializeComponent();
+            Player = player;
+            match = matches;
+            groupgame=true;
         }
 
         private void MainGame_Load(object sender, EventArgs e)
@@ -392,9 +401,12 @@ namespace Candy_Crush
                 }
             }
         }
+       
 
         private void Savebtn_Click(object sender, EventArgs e)
         {
+            if (groupgame==true)
+                SaveGroupScore();
             SaveScore();
             CrushTimer.Stop();
             this.Close();
@@ -422,5 +434,32 @@ namespace Candy_Crush
                 }
             }
         }
+        private void SaveGroupScore()
+        {
+            int currentScore = int.Parse(lblscore.Text);
+
+            using (var db = new DataBase())
+            {
+                var matchInfo = db.Matches.Find(match.MatchId);
+                if (matchInfo != null)
+                {
+                    if (matchInfo.Player1HasPlayed == false)
+                    {
+                        matchInfo.Player1Id = Player.Id;
+                        matchInfo.Player1Score = currentScore;
+                        matchInfo.Player1HasPlayed = true;
+                    }
+                    else if (matchInfo.Player1HasPlayed == true && matchInfo.Player2Hasplayed == false)
+                    {
+
+                        matchInfo.Player2Id = Player.Id;
+                        matchInfo.Player2Score = currentScore;
+                        matchInfo.Player2Hasplayed = true;
+                    }
+                }
+                db.SaveChanges();
+            }
+        }
+
     }
 }

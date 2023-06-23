@@ -68,6 +68,7 @@ namespace Candy_Crush
                     db.AddMatch(matches);
                     db.RemoveContestApplication(SellectedCA);
                     MessageBox.Show("Contest application accepted!");
+                    MainGame mainGame=new MainGame(matches,player);
                 }
             }
         }
