@@ -71,7 +71,7 @@ namespace Candy_Crush
                 {
                     int Aid = int.Parse(ApplicantId.Text);
                     var SellectedCA = contestApplications.Where(I => I.ApplicantId == Aid).FirstOrDefault();
-                    if (SellectedCA != null)
+                    if (SellectedCA != null && SellectedCA.ReceiverId != SellectedCA.SenderId)
                     {
                         Matches matches = new Matches(SellectedCA.SenderId, SellectedCA.ReceiverId);
                         db.AddMatch(matches);
@@ -79,9 +79,9 @@ namespace Candy_Crush
                         db.SaveChanges();
                         MessageBox.Show("Contest application accepted!");
                         ShowApplicants();
-                        MainGame mainGame = new MainGame(matches, player);
+                        MainGame mainGame = new MainGame(matches, player,false);
                         mainGame.ShowDialog();
-                        this.Close();
+                        this.Hide();
                     }
                 }
             }
@@ -135,13 +135,14 @@ namespace Candy_Crush
             {
                 MessageBox.Show("Friend not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            
 
         }
         private void showPendingMatches()
         {
 
             var  matches=db.GetMatches(player.Id);
-            var pendingMatch=matches.Where(m=>m.Player2Id == player.Id && m.Player1HasPlayed==true && m.Player2Hasplayed==false);
+            var pendingMatch=matches.Where(m=>m.Player1Id == player.Id && m.Player2Hasplayed ==true && m.Player1HasPlayed==false);
             if (pendingMatch != null)
             {
                 DataTable table = new DataTable();
@@ -153,8 +154,8 @@ namespace Candy_Crush
                // var opponents = pendingMatch.Select(m => m.Player1Id);
                 foreach (var match in pendingMatch)
                 {
-                    var opponent=db.GetPlayer(match.Player1Id);
-                    table.Rows.Add(match.MatchId,opponent.Name,opponent.Family,match.Player1Score);
+                    var opponent=db.GetPlayer(match.Player2Id);
+                    table.Rows.Add(match.MatchId,opponent.Name,opponent.Family,match.Player2Score);
                 }
                 PendingMatchDataGridview.DataSource = table;
                 PendingMatchDataGridview.Refresh();
@@ -189,7 +190,7 @@ namespace Candy_Crush
                     if (match != null)
                     {
                         
-                        MainGame mainGame = new MainGame(match, player);
+                        MainGame mainGame = new MainGame(match, player,true);
                         mainGame.ShowDialog();
                         this.Close();
                     }
@@ -205,7 +206,7 @@ namespace Candy_Crush
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             Team_Alone team_Alone = new Team_Alone(player);
             team_Alone.ShowDialog();
             

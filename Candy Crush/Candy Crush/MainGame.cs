@@ -25,18 +25,20 @@ namespace Candy_Crush
         private int score=0;
         private bool groupgame=false;
         private Matches match = new Matches();
+        private bool player1Play;
        
         public MainGame(Players players)
         {
             InitializeComponent();
             Player = players;
         }
-        public MainGame(Matches matches,Players player)
+        public MainGame(Matches matches,Players player,bool Player1play)
         {
             InitializeComponent();
             Player = player;
             match = matches;
             groupgame=true;
+            player1Play = Player1play;
         }
 
         private void MainGame_Load(object sender, EventArgs e)
@@ -409,10 +411,6 @@ namespace Candy_Crush
                 SaveGroupScore();
             SaveScore();
             CrushTimer.Stop();
-            this.Close();
-            Team_Alone team_Alone =new Team_Alone(Player);
-            team_Alone.ShowDialog();
-            
         }
 
         private void Resetbtn_Click_1(object sender, EventArgs e)
@@ -443,13 +441,16 @@ namespace Candy_Crush
                 var matchInfo = db.Matches.Find(match.MatchId);
                 if (matchInfo != null)
                 {
-                    if (matchInfo.Player1HasPlayed == false)
+                    matchInfo.Player2Hasplayed = true;
+                    if (matchInfo.Player2Hasplayed == true && matchInfo.Player1HasPlayed == false && player1Play==true)
                     {
                         matchInfo.Player1Id = Player.Id;
                         matchInfo.Player1Score = currentScore;
                         matchInfo.Player1HasPlayed = true;
+                        
+                        
                     }
-                    else if (matchInfo.Player1HasPlayed == true && matchInfo.Player2Hasplayed == false)
+                    else if (matchInfo.Player1HasPlayed == false && matchInfo.Player2Hasplayed == true && player1Play==false)
                     {
 
                         matchInfo.Player2Id = Player.Id;
@@ -463,7 +464,7 @@ namespace Candy_Crush
 
         private void Logoutbtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             Team_Alone team_Alone = new Team_Alone(Player);
             team_Alone.ShowDialog();
         }

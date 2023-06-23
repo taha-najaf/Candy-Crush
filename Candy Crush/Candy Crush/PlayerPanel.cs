@@ -116,17 +116,49 @@ namespace Candy_Crush
         {
             List <Matches> matches= new List<Matches>();
             matches = db.GetMatches(Player.Id);
+            int winnerScore=0;
+            int losserScore=0;
 
             DataTable table= new DataTable();
-            table.Columns.Add("Id");
-            table.Columns.Add("Winner");
-            table.Columns.Add("Losser");
+            table.Columns.Add("Match Id");
+            table.Columns.Add("Winner Name");
+            table.Columns.Add("Winner Score");
+            table.Columns.Add("Losser Name");
+            table.Columns.Add("Losser Score");
             table.Columns.Add("Draw");
 
-            foreach (var item in matches)
+            foreach (var match in matches)
             {
-                table.Rows.Add(item.MatchId, item.WinnerId, item.LoserId,item.IsDraw);
+                if (match.Player1HasPlayed && match.Player2Hasplayed)
+                {
+                    if (match.Player1Score > match.Player2Score)
+                    {
+                        match.SetWinnerAndLoser(match.Player1Id, match.Player2Id);
+                        winnerScore = match.Player1Score;
+                        losserScore = match.Player2Score;
+                    }
+                    else if (match.Player1Score < match.Player2Score)
+                    {
+                        match.SetWinnerAndLoser(match.Player2Id, match.Player1Id);
+                        losserScore = match.Player1Score;
+                        winnerScore = match.Player2Score;
+                    }
+                    else
+                    {
+                        match.SetDraw();
+                        winnerScore = losserScore = match.Player1Score;
+                    }
+
+                    var winner = db.Players.Find(match.WinnerId);
+                    string winnerName = winner.Name + ' ' + winner.Family;
+                    var loser = db.Players.Find(match.LoserId);
+                    string loserName = loser.Name + " " + loser.Family;
+
+                    table.Rows.Add(match.MatchId, winnerName, winnerScore, loserName, losserScore, match.IsDraw);
+                    
+                }
             }
+            db.SaveChanges();
             MatchDGV.DataSource = table;
             InfODataGridView.Refresh();
         }

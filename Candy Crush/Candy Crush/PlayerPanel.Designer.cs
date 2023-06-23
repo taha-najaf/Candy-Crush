@@ -151,13 +151,13 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.FriendsDatagridview.DefaultCellStyle = dataGridViewCellStyle6;
             this.FriendsDatagridview.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.FriendsDatagridview.Location = new System.Drawing.Point(43, 278);
+            this.FriendsDatagridview.Location = new System.Drawing.Point(43, 234);
             this.FriendsDatagridview.Name = "FriendsDatagridview";
             this.FriendsDatagridview.ReadOnly = true;
             this.FriendsDatagridview.RowHeadersVisible = false;
             this.FriendsDatagridview.RowHeadersWidth = 51;
             this.FriendsDatagridview.RowTemplate.Height = 24;
-            this.FriendsDatagridview.Size = new System.Drawing.Size(1414, 273);
+            this.FriendsDatagridview.Size = new System.Drawing.Size(1414, 196);
             this.FriendsDatagridview.TabIndex = 0;
             this.FriendsDatagridview.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.FriendsDatagridview.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -186,7 +186,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Khaki;
-            this.label2.Location = new System.Drawing.Point(38, 233);
+            this.label2.Location = new System.Drawing.Point(38, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 29);
             this.label2.TabIndex = 1;
@@ -198,7 +198,7 @@
             this.labFriend.BackColor = System.Drawing.Color.IndianRed;
             this.labFriend.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labFriend.ForeColor = System.Drawing.Color.Black;
-            this.labFriend.Location = new System.Drawing.Point(635, 171);
+            this.labFriend.Location = new System.Drawing.Point(635, 127);
             this.labFriend.Name = "labFriend";
             this.labFriend.Size = new System.Drawing.Size(0, 36);
             this.labFriend.TabIndex = 1;
@@ -208,7 +208,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Orange;
-            this.label3.Location = new System.Drawing.Point(38, 171);
+            this.label3.Location = new System.Drawing.Point(38, 127);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 29);
             this.label3.TabIndex = 1;
@@ -219,7 +219,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Wheat;
-            this.label4.Location = new System.Drawing.Point(167, 171);
+            this.label4.Location = new System.Drawing.Point(167, 127);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(265, 29);
             this.label4.TabIndex = 1;
@@ -241,7 +241,7 @@
             this.Codetxt.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.Codetxt.ForeColor = System.Drawing.Color.Black;
             this.Codetxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Codetxt.Location = new System.Drawing.Point(501, 171);
+            this.Codetxt.Location = new System.Drawing.Point(501, 127);
             this.Codetxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Codetxt.Name = "Codetxt";
             this.Codetxt.PasswordChar = '\0';
@@ -265,7 +265,7 @@
             this.Addbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Addbtn.ForeColor = System.Drawing.Color.ForestGreen;
             this.Addbtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.Addbtn.Location = new System.Drawing.Point(839, 171);
+            this.Addbtn.Location = new System.Drawing.Point(839, 127);
             this.Addbtn.Name = "Addbtn";
             this.Addbtn.Size = new System.Drawing.Size(180, 45);
             this.Addbtn.TabIndex = 3;
@@ -278,7 +278,7 @@
             this.Friendlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Friendlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Friendlbl.ForeColor = System.Drawing.Color.Khaki;
-            this.Friendlbl.Location = new System.Drawing.Point(603, 360);
+            this.Friendlbl.Location = new System.Drawing.Point(603, 316);
             this.Friendlbl.Name = "Friendlbl";
             this.Friendlbl.Size = new System.Drawing.Size(317, 29);
             this.Friendlbl.TabIndex = 1;
@@ -289,7 +289,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Khaki;
-            this.label5.Location = new System.Drawing.Point(38, 567);
+            this.label5.Location = new System.Drawing.Point(41, 442);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 29);
             this.label5.TabIndex = 1;
@@ -323,13 +323,13 @@
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.MatchDGV.DefaultCellStyle = dataGridViewCellStyle9;
             this.MatchDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.MatchDGV.Location = new System.Drawing.Point(43, 599);
+            this.MatchDGV.Location = new System.Drawing.Point(46, 474);
             this.MatchDGV.Name = "MatchDGV";
             this.MatchDGV.ReadOnly = true;
             this.MatchDGV.RowHeadersVisible = false;
             this.MatchDGV.RowHeadersWidth = 51;
             this.MatchDGV.RowTemplate.Height = 24;
-            this.MatchDGV.Size = new System.Drawing.Size(1137, 117);
+            this.MatchDGV.Size = new System.Drawing.Size(1411, 167);
             this.MatchDGV.TabIndex = 0;
             this.MatchDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.MatchDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -359,7 +359,7 @@
             this.Matchlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Matchlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Matchlbl.ForeColor = System.Drawing.Color.Khaki;
-            this.Matchlbl.Location = new System.Drawing.Point(636, 648);
+            this.Matchlbl.Location = new System.Drawing.Point(636, 550);
             this.Matchlbl.Name = "Matchlbl";
             this.Matchlbl.Size = new System.Drawing.Size(213, 29);
             this.Matchlbl.TabIndex = 1;
@@ -381,7 +381,7 @@
             this.Logoutbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline);
             this.Logoutbtn.ForeColor = System.Drawing.Color.Crimson;
             this.Logoutbtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.Logoutbtn.Location = new System.Drawing.Point(1264, 632);
+            this.Logoutbtn.Location = new System.Drawing.Point(1277, 671);
             this.Logoutbtn.Name = "Logoutbtn";
             this.Logoutbtn.Size = new System.Drawing.Size(180, 45);
             this.Logoutbtn.TabIndex = 3;
