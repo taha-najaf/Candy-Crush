@@ -30,7 +30,7 @@ namespace Candy_Crush
         {
             Registerfrm frm = new Registerfrm();
             frm.ShowDialog();
-            this.Close();
+            this.Hide();
         }
 
         private void Loginfrm_Load(object sender, EventArgs e)

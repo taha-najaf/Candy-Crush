@@ -34,7 +34,7 @@ namespace Candy_Crush
             MessageBox.Show($"You are registered and your code is:{player.Code} !","Register",MessageBoxButtons.OK);            
             Team_Alone team_Alone =new Team_Alone(player);
             team_Alone.ShowDialog();
-            this.Close();
+            this.Hide();
 
         }
 

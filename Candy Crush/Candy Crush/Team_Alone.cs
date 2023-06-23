@@ -29,14 +29,14 @@ namespace Candy_Crush
         {
             MainGame mainGame = new MainGame(player);
             mainGame.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void PlayGroupbtn_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"Your code for playing with your friends is {player.Code}","Code",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
-            this.Close();
+            this.Hide();
             GroupGameForm gameForm = new GroupGameForm(player);
             gameForm.ShowDialog();
         }
@@ -52,7 +52,7 @@ namespace Candy_Crush
         {
             Loginfrm loginfrm = new Loginfrm();
             loginfrm.ShowDialog();
-            this.Close();
+            this.Hide();
         }
     }
 }
