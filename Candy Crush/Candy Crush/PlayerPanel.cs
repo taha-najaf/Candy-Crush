@@ -25,20 +25,7 @@ namespace Candy_Crush
             showtableOfPlayer();
             showFriendInfo();
             showMatch();
-            if (FriendsDatagridview.Rows.Count == 0)
-            {
-                Friendlbl.Text = "No friends found.";
-            }
-            else
-            {
-                Friendlbl.Text = string.Empty;
-              
-            }
-
-            if (MatchDGV.Rows.Count == 0)  Matchlbl.Text = "No Matches found.";
-            else
-                Matchlbl.Text = string.Empty;
-
+            
 
         }
         private void showtableOfPlayer()
@@ -114,58 +101,54 @@ namespace Candy_Crush
 
         private void showMatch()
         {
-            List <Matches> matches= new List<Matches>();
+            List<Matches> matches = new List<Matches>();
             matches = db.GetMatches(Player.Id);
-            int winnerScore=0;
-            int losserScore=0;
+            DataTable table = new DataTable();
 
-            DataTable table= new DataTable();
             table.Columns.Add("Match Id");
-            table.Columns.Add("Winner Name");
-            table.Columns.Add("Winner Score");
-            table.Columns.Add("Losser Name");
-            table.Columns.Add("Losser Score");
-            table.Columns.Add("Draw");
+            table.Columns.Add("Player 1 Name");
+            table.Columns.Add("Player 1 Score");
+            table.Columns.Add("Player 2 Name");
+            table.Columns.Add("Player 2 Score");
+            table.Columns.Add("Result");
 
             foreach (var match in matches)
             {
                 if (match.Player1HasPlayed && match.Player2Hasplayed)
                 {
+                    string player1Name = db.Players.Find(match.Player1Id).Name + " " + db.Players.Find(match.Player1Id).Family;
+                    string player2Name = db.Players.Find(match.Player2Id).Name + " " + db.Players.Find(match.Player2Id).Family;
+
                     if (match.Player1Score > match.Player2Score)
                     {
                         match.SetWinnerAndLoser(match.Player1Id, match.Player2Id);
-                        winnerScore = match.Player1Score;
-                        losserScore = match.Player2Score;
+
+                        table.Rows.Add(match.MatchId, player1Name, match.Player1Score, player2Name, match.Player2Score, "Player 1 Wins");
                     }
                     else if (match.Player1Score < match.Player2Score)
                     {
                         match.SetWinnerAndLoser(match.Player2Id, match.Player1Id);
-                        losserScore = match.Player1Score;
-                        winnerScore = match.Player2Score;
+
+                        table.Rows.Add(match.MatchId, player1Name, match.Player1Score, player2Name, match.Player2Score, "Player 2 Wins");
                     }
                     else
                     {
                         match.SetDraw();
-                        winnerScore = losserScore = match.Player1Score;
+
+                        table.Rows.Add(match.MatchId, player1Name, match.Player1Score, player2Name, match.Player2Score, "Draw");
                     }
-
-                    var winner = db.Players.Find(match.WinnerId);
-                    string winnerName = winner.Name + ' ' + winner.Family;
-                    var loser = db.Players.Find(match.LoserId);
-                    string loserName = loser.Name + " " + loser.Family;
-
-                    table.Rows.Add(match.MatchId, winnerName, winnerScore, loserName, losserScore, match.IsDraw);
-                    
                 }
             }
+
             db.SaveChanges();
             MatchDGV.DataSource = table;
             InfODataGridView.Refresh();
         }
 
+
         private void Logoutbtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
 
             Team_Alone team_Alone =  new Team_Alone(Player);
             team_Alone.ShowDialog();

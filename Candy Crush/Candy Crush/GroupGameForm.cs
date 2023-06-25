@@ -30,10 +30,6 @@ namespace Candy_Crush
             ShowApplicants();
             showFriendInfo();
             showPendingMatches();
-            if (FriendsDatagridview.Rows.Count == 0)
-                Friendlbl.Text = "No friends found.";
-            else
-              Friendlbl.Text = string.Empty;
         }
         private void ShowApplicants()
         {

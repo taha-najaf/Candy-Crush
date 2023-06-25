@@ -43,7 +43,6 @@
             this.ApplicantId = new Guna.UI2.WinForms.Guna2TextBox();
             this.Acceptbtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.RejectAPbtn = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.Friendlbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.FriendsDatagridview = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Friendcodetxt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -197,18 +196,6 @@
             this.RejectAPbtn.TabIndex = 3;
             this.RejectAPbtn.Text = "Reject";
             this.RejectAPbtn.Click += new System.EventHandler(this.RejectAPbtn_Click);
-            // 
-            // Friendlbl
-            // 
-            this.Friendlbl.AutoSize = true;
-            this.Friendlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Friendlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Friendlbl.ForeColor = System.Drawing.Color.Khaki;
-            this.Friendlbl.Location = new System.Drawing.Point(234, 291);
-            this.Friendlbl.Name = "Friendlbl";
-            this.Friendlbl.Size = new System.Drawing.Size(317, 29);
-            this.Friendlbl.TabIndex = 6;
-            this.Friendlbl.Text = "You don\'t have any friend yet";
             // 
             // label2
             // 
@@ -494,7 +481,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(1514, 722);
-            this.Controls.Add(this.Friendlbl);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.PendingMatchDataGridview);
@@ -530,7 +516,6 @@
         private Guna.UI2.WinForms.Guna2TextBox ApplicantId;
         private Guna.UI2.WinForms.Guna2GradientButton Acceptbtn;
         private Guna.UI2.WinForms.Guna2GradientButton RejectAPbtn;
-        private System.Windows.Forms.Label Friendlbl;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2DataGridView FriendsDatagridview;
         private Guna.UI2.WinForms.Guna2TextBox Friendcodetxt;

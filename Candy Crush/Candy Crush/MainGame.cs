@@ -194,22 +194,43 @@ namespace Candy_Crush
             PictureBox targetTile = (PictureBox)sender;
             PictureBox sourceTile = (PictureBox)e.Data.GetData(typeof(PictureBox));
 
-            // Swap the image locations
-            string targetImg = targetTile.ImageLocation;
-            string sourceImg = sourceTile.ImageLocation;
-            targetTile.ImageLocation = sourceImg;
-            sourceTile.ImageLocation = targetImg;
-
-            // Check validity after swapping
-            if (!CheckValid())
+            if (AreCandiesNeighbors(targetTile, sourceTile))
             {
-                // Swap back if not valid
-                targetTile.ImageLocation = targetImg;
-                sourceTile.ImageLocation = sourceImg;
+                // Swap the image locations
+                string targetImg = targetTile.ImageLocation;
+                string sourceImg = sourceTile.ImageLocation;
+                targetTile.ImageLocation = sourceImg;
+                sourceTile.ImageLocation = targetImg;
+
+
+                // Check validity after swapping
+                if (!CheckValid())
+                {
+                    // Swap back if not valid
+                    targetTile.ImageLocation = targetImg;
+                    sourceTile.ImageLocation = sourceImg;
+                }
             }
         }
 
-    private bool CheckValid()
+        private bool AreCandiesNeighbors(PictureBox candy1, PictureBox candy2)
+        {
+            int row1 = int.Parse(candy1.Name.Split('-')[0]);
+            int col1 = int.Parse(candy1.Name.Split('-')[1]);
+
+            int row2 = int.Parse(candy2.Name.Split('-')[0]);
+            int col2 = int.Parse(candy2.Name.Split('-')[1]);
+
+            // Check if the candies are adjacent horizontally or vertically
+            if ((row1 == row2 && Math.Abs(col1 - col2) == 1) ||
+                (col1 == col2 && Math.Abs(row1 - row2) == 1))
+            {
+                return true;
+            }
+
+            return false;
+        }
+        private bool CheckValid()
         {
             // Check rows
             for (int r = 0; r < rows; r++)
@@ -411,6 +432,10 @@ namespace Candy_Crush
                 SaveGroupScore();
             SaveScore();
             CrushTimer.Stop();
+            timer1.Stop();
+            this.Hide();
+            Team_Alone team_Alone = new Team_Alone(Player);
+            team_Alone.ShowDialog();
         }
 
         private void Resetbtn_Click_1(object sender, EventArgs e)

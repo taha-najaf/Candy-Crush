@@ -49,9 +49,9 @@
             this.lblscore.ForeColor = System.Drawing.SystemColors.Control;
             this.lblscore.Location = new System.Drawing.Point(781, 9);
             this.lblscore.Name = "lblscore";
-            this.lblscore.Size = new System.Drawing.Size(46, 32);
+            this.lblscore.Size = new System.Drawing.Size(30, 32);
             this.lblscore.TabIndex = 2;
-            this.lblscore.Text = "45";
+            this.lblscore.Text = "0";
             // 
             // timer1
             // 

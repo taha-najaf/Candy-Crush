@@ -47,10 +47,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Codetxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.Addbtn = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.Friendlbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.MatchDGV = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Matchlbl = new System.Windows.Forms.Label();
             this.Logoutbtn = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.InfODataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FriendsDatagridview)).BeginInit();
@@ -272,18 +270,6 @@
             this.Addbtn.Text = "Add";
             this.Addbtn.Click += new System.EventHandler(this.Addbtn_Click);
             // 
-            // Friendlbl
-            // 
-            this.Friendlbl.AutoSize = true;
-            this.Friendlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Friendlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Friendlbl.ForeColor = System.Drawing.Color.Khaki;
-            this.Friendlbl.Location = new System.Drawing.Point(603, 316);
-            this.Friendlbl.Name = "Friendlbl";
-            this.Friendlbl.Size = new System.Drawing.Size(317, 29);
-            this.Friendlbl.TabIndex = 1;
-            this.Friendlbl.Text = "You don\'t have any friend yet";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -353,18 +339,6 @@
             this.MatchDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.MatchDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // Matchlbl
-            // 
-            this.Matchlbl.AutoSize = true;
-            this.Matchlbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Matchlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Matchlbl.ForeColor = System.Drawing.Color.Khaki;
-            this.Matchlbl.Location = new System.Drawing.Point(636, 550);
-            this.Matchlbl.Name = "Matchlbl";
-            this.Matchlbl.Size = new System.Drawing.Size(213, 29);
-            this.Matchlbl.TabIndex = 1;
-            this.Matchlbl.Text = "No Matches found.";
-            // 
             // Logoutbtn
             // 
             this.Logoutbtn.Animated = true;
@@ -401,8 +375,6 @@
             this.Controls.Add(this.labFriend);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.Matchlbl);
-            this.Controls.Add(this.Friendlbl);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -435,10 +407,8 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox Codetxt;
         private Guna.UI2.WinForms.Guna2GradientButton Addbtn;
-        private System.Windows.Forms.Label Friendlbl;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2DataGridView MatchDGV;
-        private System.Windows.Forms.Label Matchlbl;
         private Guna.UI2.WinForms.Guna2GradientButton Logoutbtn;
     }
 }

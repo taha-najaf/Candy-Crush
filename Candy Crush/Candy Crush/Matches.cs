@@ -46,9 +46,7 @@ namespace Candy_Crush
 
         public void SetDraw()
         {
-            WinnerId = '-'; // Reset winner when match is a draw
-            LoserId = '-'; // Reset loser when match is a draw
-            IsDraw = true;
+             IsDraw = true;
         }
         public Matches() { }
     }
