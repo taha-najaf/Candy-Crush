@@ -47,7 +47,7 @@ namespace Candy_Crush
             timer1.Start();
             CrushTimer.Tick += TimerTick;
             CrushTimer.Start();
-            MessageBox.Show("You shoul score 1500 or more to win the game");
+            MessageBox.Show("You should score 1500 or more to win the game,Remember Yellow candies have double score!","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
             //this.FormClosing += MainGame_FormClosing;
             //SaveScore();
         }
@@ -323,10 +323,16 @@ namespace Candy_Crush
                     if (candy1.ImageLocation == candy2.ImageLocation && candy2.ImageLocation == candy3.ImageLocation &&
                         !candy1.ImageLocation.Contains("blank"))
                     {
+
+                        if (candy1.ImageLocation.Contains("Yellow"))
+                            score += 60;
+                        else
+                            score += 30;
+
                         candy1.ImageLocation = "D:\\programming\\Projects\\Candy Crush\\Candy Crush\\Images\\candy\\blank.png";
                         candy2.ImageLocation = "D:\\programming\\Projects\\Candy Crush\\Candy Crush\\Images\\candy\\blank.png";
                         candy3.ImageLocation = "D:\\programming\\Projects\\Candy Crush\\Candy Crush\\Images\\candy\\blank.png";
-                        score += 30;
+                        
                     }
                 }
             }
@@ -343,10 +349,16 @@ namespace Candy_Crush
                     if (candy1.ImageLocation == candy2.ImageLocation && candy2.ImageLocation == candy3.ImageLocation &&
                         !candy1.ImageLocation.Contains("blank"))
                     {
+                        if (candy1.ImageLocation.Contains("Yellow"))
+                            score += 60;
+                        else
+                            score += 30;
+
+
                         candy1.ImageLocation = "D:\\programming\\Projects\\Candy Crush\\Candy Crush\\Images\\candy\\blank.png";
                         candy2.ImageLocation = "D:\\programming\\Projects\\Candy Crush\\Candy Crush\\Images\\candy\\blank.png";
                         candy3.ImageLocation = "D:\\programming\\Projects\\Candy Crush\\Candy Crush\\Images\\candy\\blank.png";
-                        score += 30;
+                        
                         
                     }
                 }
